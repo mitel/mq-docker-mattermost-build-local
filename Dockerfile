@@ -3,7 +3,7 @@
 FROM mhart/alpine-node:5
 MAINTAINER mitelone@gmail.com
 
-ENV GOPATH=/opt/go
+ENV GOPATH=/opt/go \
 	MATTERMOST_BUILD_PATH=${GOPATH}/src/github.com/mattermost
 
 ENV MATTERMOST_VERSION=3.0.3 \
