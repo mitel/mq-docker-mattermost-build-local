@@ -4,6 +4,7 @@ FROM mhart/alpine-node:5
 MAINTAINER mitelone@gmail.com
 
 ENV GOPATH=/opt/go
+ENV MATTERMOST_BUILD_PATH=${GOPATH}/src/github.com/mattermost
 
 RUN apk --no-cache add bash gettext sudo \
     mysql-client postgresql-client \
