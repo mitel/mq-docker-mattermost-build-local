@@ -1,6 +1,6 @@
 # to be used only for werkcer (local dev) builds at it has lots of garbage useless in production
 
-FROM mhart/alpine-node:latest
+FROM mhart/alpine-node:5
 MAINTAINER mitelone@gmail.com
 
 ENV GOPATH=/opt/go
