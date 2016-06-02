@@ -3,4 +3,12 @@ MAINTAINER mitelone@gmail.com
 
 RUN apk --no-cache add bash gettext sudo \
     mysql-client postgresql-client \
-    ca-certificates
+    ca-certificates \
+    go git mercurial nodejs make g++
+
+# install build dependencies
+# RUN apk --no-cache add --virtual build-dependencies \
+#   go git mercurial nodejs make g++
+
+RUN go get github.com/tools/godep
+RUN npm update npm --global
