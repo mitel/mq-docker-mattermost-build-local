@@ -1,4 +1,6 @@
-FROM alpine:3.3
+# to be used only for werkcer (local dev) builds at it has lots of garbage useless in production
+
+FROM mhart/alpine-node:5.10.1
 MAINTAINER mitelone@gmail.com
 
 ENV GOPATH=/opt/go
@@ -6,7 +8,7 @@ ENV GOPATH=/opt/go
 RUN apk --no-cache add bash gettext sudo \
     mysql-client postgresql-client \
     ca-certificates \
-    go git mercurial nodejs make g++
+    go git mercurial make g++
 
 # install build dependencies
 # RUN apk --no-cache add --virtual build-dependencies \
