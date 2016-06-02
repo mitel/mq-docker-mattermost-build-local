@@ -15,4 +15,3 @@ RUN apk --no-cache add bash gettext sudo \
 #   go git mercurial nodejs make g++
 
 RUN go get github.com/tools/godep
-RUN npm update npm --global
